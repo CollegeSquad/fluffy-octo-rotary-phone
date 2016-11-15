@@ -1,8 +1,14 @@
 package empire.character;
 
 import java.applet.Applet;
-
-public class Player extends Character {
+/**
+ * 
+ * @author Max
+ * This is the Player class. It extends character.
+ * It creates the users character and initializes its stats.
+ *
+ */
+public class Player  {
 	
 	private static final int STARTER_HEALTH = 100;
 	private static final int HEALTH_CAP = 500;
