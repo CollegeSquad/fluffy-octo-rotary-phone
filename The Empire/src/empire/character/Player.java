@@ -13,12 +13,13 @@ public class Player  {
 	private static final int STARTER_HEALTH = 100;
 	private static final int HEALTH_CAP = 500;
 	private static final int MAX_JUMP_HEIGHT = 5;
-	private static int currentTotalHealth;
-	private static int currentHealth;
-	private static int defense;
-	private static int attack;
-	private static int moveSpeed;
-	private static int jumpHeight;
+	private int currentTotalHealth;
+	private int currentHealth;
+	private int defense;
+	private int attack;
+	private int moveSpeed;
+	private int jumpHeight;
+	private Army army;
 	
 	public Player()
 	{
@@ -40,7 +41,7 @@ public class Player  {
 		currentHealth = currentTotalHealth;
 	}
 	
-	public static void increaseTotalHealth(int add)
+	public void increaseTotalHealth(int add)
 	{
 		if (currentTotalHealth + add <= 500)
 		{
@@ -51,19 +52,19 @@ public class Player  {
 			currentTotalHealth = 500;
 		}
 	}
-	public static void increaseDefense(int add)
+	public void increaseDefense(int add)
 	{
 		defense += add;
 	}
-	public static void increaseAttack(int add)
+	public void increaseAttack(int add)
 	{
 		attack += add;
 	}
-	public static void increaseMoveSpeed(int add)
+	public void increaseMoveSpeed(int add)
 	{
 		moveSpeed += add;
 	}
-	public static void increaseJumpHeight(int add)
+	public void increaseJumpHeight(int add)
 	{
 		if (jumpHeight + add <= 5)
 		{
@@ -76,19 +77,19 @@ public class Player  {
 	}
 	
 	
-	public static void takeDamage(int damage)
+	public void takeDamage(int damage)
 	{
 		currentHealth -= damage;
 		if (currentHealth <= 0)
 		{
-		Player.die();
+		die();
 		}
 	}
 	/**
 	 * Need this method to move the character back to a spawn point, and then
 	 * have some sort of penalty. Lose some money or shit.
 	 */
-	public static void die()
+	public void die()
 	{
 		
 	}
