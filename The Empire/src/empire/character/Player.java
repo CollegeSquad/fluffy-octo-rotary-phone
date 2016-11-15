@@ -33,10 +33,10 @@ public class Player  {
 	public Player(int health, int defense, int attack, int moveSpeed, int jumpHeight)
 	{
 		currentTotalHealth = health;
-		defense = defense;
-		attack = attack;
-		moveSpeed = moveSpeed;
-		jumpHeight = jumpHeight;
+		this.defense = defense;
+		this.attack = attack;
+		this.moveSpeed = moveSpeed;
+		this.jumpHeight = jumpHeight;
 		currentHealth = currentTotalHealth;
 	}
 	
@@ -44,7 +44,7 @@ public class Player  {
 	{
 		if (currentTotalHealth + add <= 500)
 		{
-		currentTotalHealth += add;
+			currentTotalHealth += add;
 		}
 		else if (currentTotalHealth + add >= 500)
 		{
@@ -94,7 +94,7 @@ public class Player  {
 	}
 	
 	
-	}
+}
 	
 	
 	
